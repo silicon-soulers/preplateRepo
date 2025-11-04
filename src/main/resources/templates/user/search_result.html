@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <link rel="stylesheet" th:href="@{/css/menu_list_styles.css}"></link>
+</head>
+<body>
+<section class="menu-grid">
+    <div th:each="menu : ${menu_list}" class="menu-card">
+        <div class="menu-top">
+            <img th:src="${menu.image != null} ? @{${menu.image}} : @{/images/default-cuisine.jpg}"
+                 alt="Menu Picture"
+                 class="menu-picture" />
+            <h3 th:text="${menu.name}"></h3>
+            <p th:text="${menu.description}"></p>
+            <p th:text="${menu.price}"></p>
+            <p th:text="${menu.restaurant.name}"></p>
+            <p th:text="${menu.restaurant.address}"></p>
+        </div>
+        <div class="menu-meta">
+            <form th:action="@{'/index'}" method="post">
+                <button type="submit" class="danger">Order</button>
+            </form>
+        </div>
+    </div>
+</section>
+</div>
+</body>
+</html>

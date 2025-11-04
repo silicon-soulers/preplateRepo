@@ -11,7 +11,7 @@
 <div class="register-container">
     <div class="register-card">
         <h1 class="title">Create Your Account</h1>
-        <form th:action="@{/auth/register}" method="post" class="register-form">
+        <form th:action="@{/user/register}" method="post" class="register-form">
             <label>
                 <span>Username</span>
                 <input name="username" required />
@@ -19,13 +19,6 @@
             <label>
                 <span>Password</span>
                 <input name="password" type="password" required />
-            </label>
-            <label>
-                <span>Role</span>
-                <select name="role" required>
-                    <option value="ROLE_USER">User</option>
-                    <option value="ROLE_RESTAURANT">Restaurant Owner</option>
-                </select>
             </label>
             <label>
                 <span>Email</span>

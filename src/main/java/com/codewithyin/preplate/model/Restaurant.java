@@ -15,11 +15,10 @@ public class Restaurant {
     private Long id;
     private String name;
     private String address;
-    private double latitude;
-    private double longitude;
+    private String email;
+    private String phone;
+    private String password;
 
     @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
     private List<MenuItem> menuItems;
-
-    private Long ownerId; // link to User.id
 }

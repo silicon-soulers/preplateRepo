@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 
 @Entity
@@ -18,16 +17,23 @@ public class MenuItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long userId;
+    private String name;
+
+    private String description;
+
+    private String image;
+
+    private Long price;
+
     @ManyToOne
+    @JoinColumn(name="restaurant_id")
     private Restaurant restaurant;
 
-    private String status;
-    private LocalDateTime createdAt;
+    private LocalDateTime createdAt = LocalDateTime.now();
 
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<OrderItem> items;
+
+
 
 
 // getters/setters

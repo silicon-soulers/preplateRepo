@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', sans-serif;
+    background-color: #131313;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #b30000, #ff0000);
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Search box */
+.search-form {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 50px;
+    padding: 5px 10px;
+    width: 400px;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.search-form button {
+    background: transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #b30000;
+}
+
+.search-form:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Buttons */
+.nav-right a {
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-login {
+    background-color: #fff;
+    color: #b30000;
+}
+
+.btn-register {
+    background-color: #ffcccb;
+    color: #b30000;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+    background-color: #fff;
+    color: #ff0000;
+    transform: scale(1.05);
+}
+
+
+/* FOOD GALLERY SECTION */
+.food-gallery {
+    padding: 20px 5%;
+    text-align: center;
+    background-color: #131313;
+}
+
+.food-gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform .3s ease, box-shadow .3s ease;
+    border: 2px solid #ffccbb;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.gallery-item p {
+    padding: 12px;
+    font-size: 1rem;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Hover Effect */
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}

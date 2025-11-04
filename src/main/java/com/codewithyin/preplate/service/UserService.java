@@ -1,6 +1,6 @@
 package com.codewithyin.preplate.service;
 
-import com.codewithyin.preplate.model.User;
+import com.codewithyin.preplate.model.AppUser;
 import com.codewithyin.preplate.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -18,23 +18,23 @@ public class UserService {
     }
 
     // Fetch all users
-    public List<User> getAllUsers() {
+    public List<AppUser> getAllUsers() {
         return userRepository.findAll();
     }
 
     // Fetch user by id
-    public Optional<User> getUserById(Long id) {
+    public Optional<AppUser> getUserById(Long id) {
         return userRepository.findById(id);
     }
 
     // Fetch user by username
-    public Optional<User> getUserByUsername(String username) {
-        return userRepository.findByUsername(username);
+    public Optional<AppUser> getUserByEmail(String email) {
+        return userRepository.findByEmail(email);
     }
 
     // Save or update user
-    public User saveUser(User user) {
-        return userRepository.save(user);
+    public AppUser saveUser(AppUser appUser) {
+        return userRepository.save(appUser);
     }
 
     // Delete user by id
@@ -42,7 +42,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    public void registerUser(User user) {
-        userRepository.save(user);
+    public void registerUser(AppUser appUser) {
+        userRepository.save(appUser);
     }
 }

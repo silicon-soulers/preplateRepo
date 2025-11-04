@@ -9,12 +9,13 @@
 }
 
 body {
-    height: 100vh;
-    background: linear-gradient(135deg, #b31217, #e52d27);
+    height: 130vh;
+    background: #131313;
     display: flex;
     justify-content: center;
     align-items: center;
     animation: fadeIn 1.5s ease-in-out;
+    padding: 50px;
 }
 
 .register-container {
@@ -45,7 +46,7 @@ body {
     color: #b31217;
     font-weight: 600;
     margin-bottom: 25px;
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 .register-form label {
@@ -80,7 +81,7 @@ body {
 }
 
 .btn-register {
-    background: linear-gradient(90deg, #b31217, #e52d27);
+    background: linear-gradient(90deg, #b30000, #ff0000);
     border: none;
     color: white;
     font-size: 1.1em;

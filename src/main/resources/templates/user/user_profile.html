@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link rel="stylesheet" th:href="@{/css/user/user_profile_style.css}">
+</head>
+<body>
+<div class="profile-container">
+
+    <div class="profile-card">
+
+        <div class="profile-header">
+            <img th:src="${user.profileImage != null} ? @{${user.profileImage}} : @{/images/default-avatar.jpg}"
+                 alt="Profile Picture"
+                 class="profile-picture" />
+            <h2 th:text="${user.name}"></h2>
+        </div>
+
+        <div class="profile-details">
+            <p><strong>Email:</strong> <span th:text="${user.email}"></span></p>
+            <p><strong>City:</strong> <span th:text="${user.city}"></span></p>
+        </div>
+
+        <div class="profile-actions">
+            <a th:href="@{/user/edit-profile}" class="btn-edit">Edit Profile</a>
+            <a th:href="@{/logout}" class="btn-logout">Logout</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -5,6 +5,7 @@ import com.codewithyin.preplate.repository.RestaurantRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -18,8 +19,8 @@ public class RestaurantService {
     }
 
 
-    public Restaurant get(Long id) {
-        return restaurantRepository.findById(id).orElseThrow();
+    public Optional<Restaurant> getRestaurantByEmail(String email) {
+        return restaurantRepository.findByEmail(email);
     }
 
 

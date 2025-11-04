@@ -1,0 +1,72 @@
+body {
+    background-color: #131313;
+}
+
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-picture {
+    width: 220px;
+    height: 220px;
+    border-radius: 5px;
+    object-fit: cover;
+    border: 3px solid #131313;
+    margin-bottom: 10px;
+}
+
+.menu-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.menu-card p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+.menu-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.menu-meta button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.menu-meta button:first-child {
+    background-color: #3498db;
+    color: white;
+}
+
+.menu-meta button:first-child:hover {
+    background-color: #2980b9;
+}
+
+.menu-meta button.danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.menu-meta button.danger:hover {
+    background-color: #c0392b;
+}
