@@ -1,0 +1,27 @@
+<!-- templates/fragments/header.html -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrePlate | Home</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <script defer th:src="@{/js/script.js}"></script>
+</head>
+<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="/" class="logo">PrePlate</a>
+        </div>
+
+        <div class="nav-center">
+            <form th:action="@{/search}" method="get" class="search-form">
+                <input type="text" name="query" placeholder="Search city or cuisine..." required />
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+
+        <div class="nav-right">
+            <a th:href="@{/auth/login}" class="btn-login">Login</a>
+            <a th:href="@{/auth/register}" class="btn-register">Register</a>
+        </div>
+    </nav>
+</header>

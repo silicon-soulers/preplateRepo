@@ -1,0 +1,123 @@
+/* ===== Red Animated Professional Register Page ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #b31217, #e52d27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.register-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 50px;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: slideUp 1s ease-out;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.register-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+    color: #b31217;
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.register-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.register-form span {
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.register-form input,
+.register-form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+    border-color: #e52d27;
+    box-shadow: 0 0 5px rgba(229, 45, 39, 0.4);
+    outline: none;
+}
+
+.btn-register {
+    background: linear-gradient(90deg, #b31217, #e52d27);
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.4s ease, transform 0.2s;
+}
+
+.btn-register:hover {
+    background: linear-gradient(90deg, #e52d27, #b31217);
+    transform: scale(1.03);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    .register-card {
+        width: 90%;
+        padding: 30px 25px;
+    }
+}

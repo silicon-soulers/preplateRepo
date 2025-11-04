@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrePlate | Home</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <script defer th:src="@{/js/script.js}"></script>
+</head>
+<body>
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main class="hero">
+    <h1>SAVE TIME WITH PREPLATE</h1>
+    <p>In today’s world, time is a limited resource. The time we are spending at the food court to get ready of
+        our food is around 4 % of our day if we dine-out 3 times a day. To save this small yet valuable time,
+        we start this project!</p>
+</main>
+
+<section class="food-gallery">
+    <h2>Popular Dishes</h2>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="/images/foods/pizza.jpg" alt="Pizza">
+            <p>Cheese Pizza</p>
+        </div>
+        <div class="gallery-item">
+            <img th:src="@{/images/foods/burger.jpg}" alt="Burger">
+            <p>Classic Burger</p>
+        </div>
+        <div class="gallery-item">
+            <img src="/images/foods/sushi.jpg" alt="Sushi">
+            <p>Fresh Sushi</p>
+        </div>
+        <div class="gallery-item">
+            <img src="/images/foods/pasta.jpg" alt="Pasta">
+            <p>Italian Pasta</p>
+        </div>
+        <div class="gallery-item">
+            <img src="/images/foods/salad.jpg" alt="Salad">
+            <p>Healthy Salad</p>
+        </div>
+        <div class="gallery-item">
+            <img src="/images/foods/potato-chips.jpg" alt="Potato Chips">
+            <p>Steak Plate</p>
+        </div>
+        <div class="gallery-item">
+            <img src="/images/foods/fried-rice.jpg" alt="Fried Rice">
+            <p>Fried Rice</p>
+        </div>
+        <div class="gallery-item">
+            <img src="/images/foods/fried-noodles.jpg" alt="Fried Noodles">
+            <p>Fried Noodles</p>
+        </div>
+        <div class="gallery-item">
+            <img src="/images/foods/momos.jpg" alt="Momos">
+            <p>MoMos</p>
+        </div>
+        <div class="gallery-item">
+            <img src="/images/foods/honey-chili-potato.jpg" alt="Honey Chili Potato">
+            <p>Honey Chili Potato</p>
+        </div>
+    </div>
+</section>
+</body>
+</html>

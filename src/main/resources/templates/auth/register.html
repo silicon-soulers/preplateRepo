@@ -1,0 +1,43 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Register | Preplate</title>
+    <link rel="stylesheet" th:href="@{/css/register.css}" />
+    <script defer th:src="@{/js/script.js}"></script>
+</head>
+<body>
+
+<div class="register-container">
+    <div class="register-card">
+        <h1 class="title">Create Your Account</h1>
+        <form th:action="@{/auth/register}" method="post" class="register-form">
+            <label>
+                <span>Username</span>
+                <input name="username" required />
+            </label>
+            <label>
+                <span>Password</span>
+                <input name="password" type="password" required />
+            </label>
+            <label>
+                <span>Role</span>
+                <select name="role" required>
+                    <option value="ROLE_USER">User</option>
+                    <option value="ROLE_RESTAURANT">Restaurant Owner</option>
+                </select>
+            </label>
+            <label>
+                <span>Email</span>
+                <input name="email" type="email" required />
+            </label>
+            <label>
+                <span>City</span>
+                <input name="city" type="text" required />
+            </label>
+            <button type="submit" class="btn-register">Register</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
