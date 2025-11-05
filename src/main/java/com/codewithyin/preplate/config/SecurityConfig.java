@@ -44,7 +44,7 @@ public class SecurityConfig {
                         .permitAll()
                 )
                 .logout(logout -> logout
-                        .logoutUrl("/restaurant/logout")
+                        .logoutUrl("/")
                         .logoutSuccessUrl("/restaurant/login?logout=true")
                         .permitAll()
                 );

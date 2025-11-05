@@ -3,6 +3,8 @@ package com.codewithyin.preplate.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "app_user")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
@@ -17,5 +19,6 @@ public class AppUser {
 
     private String profileImage;
 
-    // for owners: link to restaurant (optional)
+    @OneToMany(mappedBy = "appUser", cascade = CascadeType.ALL)
+    private List<Order> orders;
 }

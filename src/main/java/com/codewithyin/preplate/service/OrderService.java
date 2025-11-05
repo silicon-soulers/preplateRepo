@@ -12,7 +12,7 @@ public class OrderService {
     private final OrderRepository orderRepository;
 
     public List<Order> getOrdersForUser(Long userId) {
-        return orderRepository.findByUserIdOrderByCreatedAtDesc(userId);
+        return orderRepository.findByAppUserIdOrderByCreatedAtDesc(userId);
     }
 
     public List<Order> getOrdersForRestaurant(Long restaurantId) {

@@ -55,4 +55,9 @@ public class UserController {
         return "user/user_dashboard";
     }
 
+    @GetMapping("/logout")
+    public String logout(Principal principal) {
+        return "redirect:/";
+    }
+
 }

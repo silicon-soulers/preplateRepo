@@ -49,6 +49,7 @@
 
 <section class="food-gallery">
     <h2>Popular Dishes</h2>
+    <div class="gallery-divider"></div>
     <div class="gallery-container">
         <div class="gallery-item">
             <img src="/images/foods/pizza.jpg" alt="Pizza">
@@ -182,5 +183,124 @@
         </div>
     </div>
 </section>
-</body>
+<!-- About Us Section -->
+<section class="about-us" id="about">
+    <h2>About Us</h2>
+    <div class="about-divider"></div>
+    <p class="about-description">
+        PrePlate is revolutionizing the way people order food by eliminating wait times and streamlining the dining experience.
+        Our platform connects food lovers with their favorite restaurants, making every meal effortless and enjoyable.
+    </p>
+    <div class="about-content">
+        <div class="about-card">
+            <div class="about-card-icon">⚡</div>
+            <h3>Fast & Efficient</h3>
+            <p>Pre-order your meals and skip the queue. Your food will be ready when you arrive, saving valuable time in your busy day.</p>
+        </div>
+        <div class="about-card">
+            <div class="about-card-icon">🍽️</div>
+            <h3>Wide Selection</h3>
+            <p>Access hundreds of restaurants and thousands of dishes. From local favorites to international cuisines, find exactly what you're craving.</p>
+        </div>
+        <div class="about-card">
+            <div class="about-card-icon">💳</div>
+            <h3>Secure Payments</h3>
+            <p>Multiple payment options with industry-standard security. Your transactions are safe, fast, and hassle-free.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h2>Get In Touch</h2>
+    <div class="contact-divider"></div>
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-details">
+                    <h3>Location</h3>
+                    <p>Greater Noida, Uttar Pradesh<br>India</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-details">
+                    <h3>Email</h3>
+                    <a href="mailto:support@preplate.com">support@preplate.com</a>
+                    <a href="mailto:info@preplate.com">info@preplate.com</a>
+                </div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-details">
+                    <h3>Phone</h3>
+                    <a href="tel:+911234567890">+91 123 456 7890</a>
+                    <a href="tel:+919876543210">+91 987 654 3210</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="footer-logo">PREPLATE</div>
+            <p>Saving your time, one meal at a time. Pre-order delicious food from your favorite restaurants and skip the wait.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon">📘</a>
+                <a href="#" class="social-icon">🐦</a>
+                <a href="#" class="social-icon">📷</a>
+                <a href="#" class="social-icon">💼</a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="#">How It Works</a>
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+        </div>
+        <div class="footer-section">
+            <h3>For Partners</h3>
+            <a th:href="@{/restaurant/register}">Register Restaurant</a>
+            <a href="#">Partner Login</a>
+            <a href="#">Partner Support</a>
+            <a href="#">Restaurant Guidelines</a>
+        </div>
+        <div class="footer-section">
+            <h3>Support</h3>
+            <a href="#">Help Center</a>
+            <a href="#">FAQs</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Refund Policy</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 PrePlate. All rights reserved.</p>
+        <p>Made with ❤️ for food lovers everywhere
+        </p>
+    </div>
+</footer>
 </html>

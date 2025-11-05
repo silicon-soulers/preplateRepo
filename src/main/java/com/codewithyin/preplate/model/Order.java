@@ -20,13 +20,19 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long userId;
-    private Long restaurantId;
     private String status;
     private LocalDateTime createdAt;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<OrderItem> items;
+    @ManyToOne
+    @JoinColumn(name = "restaurant_id")
+    private Restaurant restaurant;
+
+    @OneToMany(mappedBy ="order", cascade = CascadeType.ALL)
+    private List<OrderItem> orderItems;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private AppUser appUser;
 
 // getters/setters
 }

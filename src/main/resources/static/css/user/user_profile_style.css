@@ -1,54 +1,231 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #131313;
+    color: #e5e5e5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .profile-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #131313;
+    width: 100%;
+    max-width: 500px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .profile-card {
-    background: #fff;
-    width: 420px;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
+    background: #1e1e1e;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2a2a2a;
 }
 
 .profile-header {
-    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ff3b3b 0%, #c62828 100%);
+    padding: 60px 40px 40px;
+    text-align: center;
+    position: relative;
+}
+
+.profile-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
 }
 
 .profile-picture {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.2);
     object-fit: cover;
-    border: 3px solid #131313;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.05);
+}
+
+.profile-header h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-details {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .profile-details p {
-    font-size: 16px;
-    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: #131313;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    transition: all 0.3s ease;
 }
 
-.profile-actions .btn-edit,
-.profile-actions .btn-logout {
-    display: inline-block;
-    padding: 10px 18px;
-    margin: 10px 6px;
-    border-radius: 6px;
+.profile-details p:hover {
+    border-color: #ff3b3b;
+    transform: translateX(4px);
+}
+
+.profile-details strong {
+    color: #b0b0b0;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-details strong::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #ff3b3b;
+    border-radius: 50%;
+}
+
+.profile-details span {
+    color: #e5e5e5;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.profile-actions {
+    padding: 0 40px 40px;
+    display: flex;
+    gap: 16px;
+}
+
+.btn-logout {
+    flex: 1;
+    padding: 16px 24px;
+    border-radius: 10px;
     text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #ff3b3b 0%, #c62828 100%);
     color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 59, 59, 0.3);
 }
 
-.btn-edit { background: #007bff; }
-.btn-logout { background: #dc3545; }
-.btn-edit:hover { background: #0056b3; }
-.btn-logout:hover { background: #c82333; }
+
+.btn-logout:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 59, 59, 0.4);
+}
+
+.btn-logout:active {
+    transform: translateY(0);
+}
+
+/* Badge/Icon styles for details */
+.detail-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .profile-container {
+        max-width: 100%;
+    }
+
+    .profile-header {
+        padding: 40px 24px 30px;
+    }
+
+    .profile-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-details {
+        padding: 30px 24px;
+        gap: 16px;
+    }
+
+    .profile-details p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .profile-actions {
+        padding: 0 24px 30px;
+        flex-direction: column;
+    }
+
+    .btn-edit,
+    .btn-logout {
+        width: 100%;
+    }
+}
+
+/* Loading state animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
