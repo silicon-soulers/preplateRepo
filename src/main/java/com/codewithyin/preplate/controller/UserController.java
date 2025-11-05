@@ -52,7 +52,7 @@ public class UserController {
     public String search(@RequestParam String query, Model model, Principal principal) {
         List<MenuItem> menu_list = menuItemService.findByMenuItemName(query);
         model.addAttribute("menu_list", menu_list);
-        return "user/search_result";
+        return "user/user_dashboard";
     }
 
 }

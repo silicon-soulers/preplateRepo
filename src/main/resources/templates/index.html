@@ -12,66 +12,173 @@
 
 <main class="hero">
     <h1>SAVE TIME WITH PREPLATE</h1>
-    <p>In today’s world, time is a limited resource. The time we are spending at the food court to get ready of
-        our food is around 4 % of our day if we dine-out 3 times a day. To save this small yet valuable time,
-        we start this project!</p>
+
+    <div class="hero-divider"></div>
+
+    <p>
+        In today's world, time is a limited resource. The time we spend at the food court
+        to get our food ready is around <span class="highlight-stat">4% of our day</span>
+        if we dine-out 3 times a day. To save this small yet valuable time, we started this project!
+    </p>
+
+    <div class="scroll-indicator">
+        <span>↓</span>
+    </div>
 </main>
+
 <div class="authentication">
     <div class="restaurant-auth">
+        <div class="auth-icon">🏪</div>
         <h2>For Restaurant Owners</h2>
-        <p> Restaurants Owners can register and promote their products here!</p>
-        <a th:href="@{/restaurant/register}" class="btn-register">Register</a>
-        <a th:href="@{/restaurant/login}" class="btn-login">Login</a>
+        <p>Restaurant Owners can register and promote their products here!</p>
+        <div class="auth-buttons">
+            <a th:href="@{/restaurant/register}" class="btn-register">Register</a>
+            <a th:href="@{/restaurant/login}" class="btn-login">Login</a>
+        </div>
     </div>
     <div class="user-auth">
+        <div class="auth-icon">👨‍🍳</div>
         <h2>For Foodies</h2>
         <p>You chose the right place to taste every cuisine within a few clicks.</p>
-        <a th:href="@{/user/register}" class="btn-register">Register</a>
-        <a th:href="@{/user/login}" class="btn-register">Login</a>
+        <div class="auth-buttons">
+            <a th:href="@{/user/register}" class="btn-register">Register</a>
+            <a th:href="@{/user/login}" class="btn-login">Login</a>
+        </div>
     </div>
 </div>
+
 <section class="food-gallery">
     <h2>Popular Dishes</h2>
     <div class="gallery-container">
         <div class="gallery-item">
             <img src="/images/foods/pizza.jpg" alt="Pizza">
-            <p>Cheese Pizza</p>
+            <div class="item-details">
+                <h3 class="item-name" >Pizza</h3>
+                <p class="item-restaurant" >Domino</p>
+                <div class="item-footer">
+                    <p class="item-price" >Rs. 200</p>
+                    <button class="order-btn" >
+                        Order Now
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="gallery-item">
-            <img th:src="@{/images/foods/burger.jpg}" alt="Burger">
-            <p>Classic Burger</p>
+            <img src="/images/foods/burger.jpg" alt="Burger">
+            <div class="item-details">
+                <h3 class="item-name" >Burger</h3>
+                <p class="item-restaurant" >Fast Food Service</p>
+                <div class="item-footer">
+                    <p class="item-price" >Rs. 250</p>
+                    <button class="order-btn" >
+                        Order Now
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="gallery-item">
             <img src="/images/foods/sushi.jpg" alt="Sushi">
-            <p>Fresh Sushi</p>
+            <div class="item-details">
+                <h3 class="item-name" >Sushi</h3>
+                <p class="item-restaurant" >Japanese Restaurant</p>
+                <div class="item-footer">
+                    <p class="item-price" >Rs. 300</p>
+                    <button class="order-btn" >
+                        Order Now
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="gallery-item">
             <img src="/images/foods/pasta.jpg" alt="Pasta">
-            <p>Italian Pasta</p>
+            <div class="item-details">
+                <h3 class="item-name" >Pasta</h3>
+                <p class="item-restaurant" >Uncle Restaurant</p>
+                <div class="item-footer">
+                    <p class="item-price" >Rs. 150</p>
+                    <button class="order-btn" >
+                        Order Now
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="gallery-item">
             <img src="/images/foods/salad.jpg" alt="Salad">
-            <p>Healthy Salad</p>
+            <div class="item-details">
+                <h3 class="item-name" >Salad</h3>
+                <p class="item-restaurant" >Nepali Restaurant</p>
+                <div class="item-footer">
+                    <p class="item-price" >Rs. 1000</p>
+                    <button class="order-btn" >
+                        Order Now
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="gallery-item">
             <img src="/images/foods/potato-chips.jpg" alt="Potato Chips">
-            <p>Steak Plate</p>
+            <div class="item-details">
+                <h3 class="item-name" >Potato Chips</h3>
+                <p class="item-restaurant" >Potato Chips</p>
+                <div class="item-footer">
+                    <p class="item-price" >Rs. 50</p>
+                    <button class="order-btn" >
+                        Order Now
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="gallery-item">
             <img src="/images/foods/fried-rice.jpg" alt="Fried Rice">
-            <p>Fried Rice</p>
+            <div class="item-details">
+                <h3 class="item-name" >Fried Rice</h3>
+                <p class="item-restaurant" >Do Do Restaurant</p>
+                <div class="item-footer">
+                    <p class="item-price" >Rs. 200</p>
+                    <button class="order-btn" >
+                        Order Now
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="gallery-item">
             <img src="/images/foods/fried-noodles.jpg" alt="Fried Noodles">
-            <p>Fried Noodles</p>
+            <div class="item-details">
+                <h3 class="item-name" >Fried Noodles</h3>
+                <p class="item-restaurant" >Do Do Restaurant</p>
+                <div class="item-footer">
+                    <p class="item-price" >Rs. 200</p>
+                    <button class="order-btn" >
+                        Order Now
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="gallery-item">
             <img src="/images/foods/momos.jpg" alt="Momos">
-            <p>MoMos</p>
+            <div class="item-details">
+                <h3 class="item-name" >Momos</h3>
+                <p class="item-restaurant" >Mo Mo King</p>
+                <div class="item-footer">
+                    <p class="item-price" >Rs. 70</p>
+                    <button class="order-btn" >
+                        Order Now
+                    </button>
+                </div>
+            </div>
         </div>
         <div class="gallery-item">
             <img src="/images/foods/honey-chili-potato.jpg" alt="Honey Chili Potato">
-            <p>Honey Chili Potato</p>
+            <div class="item-details">
+                <h3 class="item-name" >Honey Chili Potato</h3>
+                <p class="item-restaurant" >Nepali Restaurant</p>
+                <div class="item-footer">
+                    <p class="item-price" >Rs. 130</p>
+                    <button class="order-btn" >
+                        Order Now
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </section>

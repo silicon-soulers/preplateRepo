@@ -25,7 +25,7 @@ public class MenuItemService {
     }
 
     public List<MenuItem> findByMenuItemName(String menuItemName) {
-        return menuItemRepository.findMenuItemByNameIgnoreCase(menuItemName);
+        return menuItemRepository.findMenuItemByNameContainingIgnoreCase(menuItemName);
     }
 
     public Optional<MenuItem> findById(Long id) {

@@ -110,6 +110,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
     justify-items: center;
+    padding: 20px 0;
 }
 
 .gallery-item {
@@ -129,15 +130,63 @@ body {
     object-fit: cover;
 }
 
-.gallery-item p {
-    padding: 12px;
-    font-size: 1rem;
-    color: #444;
-    font-weight: 500;
+.item-details {
+    padding: 15px;
+}
+
+.item-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px 0;
+}
+
+.item-restaurant {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0 0 12px 0;
+}
+
+.item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.item-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff6b35;
+    margin: 0;
+}
+
+.order-btn {
+    background: linear-gradient(135deg, #ff6b35, #ff8c61);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(255, 107, 53, 0.3);
+}
+
+.order-btn:hover {
+    background: linear-gradient(135deg, #ff8c61, #ff6b35);
+    box-shadow: 0 4px 10px rgba(255, 107, 53, 0.5);
+    transform: scale(1.05);
+}
+
+.order-btn:active {
+    transform: scale(0.98);
 }
 
 /* Hover Effect */
 .gallery-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+    border-color: #ff6b35;
 }
